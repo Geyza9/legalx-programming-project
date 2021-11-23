@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace legalxproject
-{// client class
+{// Client class
     class Client
     {
         public int clientid { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace legalxproject
 {
-    // This is the Base Class for employee types
+    // This is the base class for employee types
     public class Employee
     {
         public Employee(int id, string name,  DateTime joineddate, string otherexpertise)

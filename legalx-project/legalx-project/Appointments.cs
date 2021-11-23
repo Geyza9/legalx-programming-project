@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace legalxproject
 {
-    // appointment class
+    // Appointment class
     class Appointments
     {
         public int appointmentid { get; set; }

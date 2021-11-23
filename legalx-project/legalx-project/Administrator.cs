@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace legalxproject
 {
-    //third Child class of employee
+    //Third Child class of employee
     class Administrator : Employee
     {
         public Administrator(int id, string fullname, DateTime joineddate, string otherexpertise, string role) : base(id, fullname, joineddate, otherexpertise)

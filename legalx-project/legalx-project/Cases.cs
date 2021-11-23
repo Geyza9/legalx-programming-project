@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace legalxproject
 {
+    // Class for cases
     class Cases
     {
         public int caseid { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace legalxproject
 {
-    //meeting room class
+    //Meeting room class
     class MeetingRooms
     {
         public string name { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace legalxproject
 {
-    //first child class of Employee
+    //First child class of Employee
     public class SeniorLawyer : Employee
     {
         public SeniorLawyer(int id, string fullname, DateTime DOB, DateTime joineddate, string otherexpertise, int yearsexperience, string specialisation) : base(id, fullname, joineddate, otherexpertise)

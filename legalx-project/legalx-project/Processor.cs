@@ -100,10 +100,40 @@ namespace legalxproject
                 }
             }
 
-            public int Add
+        }
 
 
+        //methods
+        public void AddNewClient()
+        {
 
         }
+
+        public void AddNewAppointment()
+        {
+
+        }
+
+        public void AddNewCase()
+        {
+
+        }
+
+        public void ListClients()
+        {
+
+        }
+
+        public void ListCases()
+        {
+
+        }
+
+        public void ListAppointments()
+        {
+
+        }
+
+
     }
 }

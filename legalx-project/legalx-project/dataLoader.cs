@@ -18,7 +18,17 @@ namespace legalxproject
 
             foreach (string line in data)
             {
-                List<String> variables = 
+                if(line != data[0])
+                {
+                    if(line != data[1])
+                    {
+                        var columns = line.Split(';');
+                        foreach (string variable in columns)
+                        {
+                        }
+                    }
+                }
+                
             }
         }
     }

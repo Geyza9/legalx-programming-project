@@ -1,2 +1,2 @@
-﻿thisisalawyer;
-thisisanotherlawyer
+﻿lawyerType;EmployeeId;Name;DOB;joinedDate;otherExpertise;YearsofExperience;Specialization
+

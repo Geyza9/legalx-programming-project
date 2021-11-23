@@ -25,6 +25,7 @@ namespace legalxproject
                         var columns = line.Split(';');
                         foreach (string variable in columns)
                         {
+                            Console.WriteLine(variable);
                         }
                     }
                 }

@@ -6,7 +6,10 @@ namespace legalxproject
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello Worldgtgtgtggttggt!");
+            dataLoader d = new dataLoader();
+
+            d.loadData();
         }
+
     }
 }

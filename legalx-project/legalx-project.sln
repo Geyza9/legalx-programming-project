@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.810.11
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "legalx-project", "legalx-project\legalx-project.csproj", "{84C6B424-3F01-4D32-A390-0EFB41EB993A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AC4CBFD-49BF-40C4-8F78-DF7CB8EFA979}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu

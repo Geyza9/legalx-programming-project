@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace legalxproject
 {
@@ -7,8 +8,17 @@ namespace legalxproject
         public static void Main(string[] args)
         {
             dataLoader d = new dataLoader();
+            Processor p = new Processor();
 
-            d.loadData();
+            List<Employee> lawyers = d.loadData(); //load the lawyers from the txt database
+
+            foreach (Employee lawyer in lawyers)
+            {
+                Console.WriteLine(lawyer);
+            }
+
+            p.login(); //login procedure
+
         }
 
     }

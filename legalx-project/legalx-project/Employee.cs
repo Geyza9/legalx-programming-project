@@ -9,6 +9,11 @@ namespace legalxproject
     // This is the Base Class for employee types
     public class Employee
     {
+        public Employee() //Default empty constructor
+        {
+
+        }
+
         public Employee(int id, string name,  DateTime joineddate, string otherexpertise)
         {
             EmployeeId = id;
@@ -28,7 +33,7 @@ namespace legalxproject
             basicemployeeinfo.AppendLine("******* Here are the Employee Details ********");
             basicemployeeinfo.AppendLine($" Employee ID is: {EmployeeId}");
             basicemployeeinfo.AppendLine($" Employees Full Name is: {FullName}");
-            basicemployeeinfo.AppendLine($" Joined LegalX on: {JoinedDate.ToString("ddMMyyyy")}");
+            basicemployeeinfo.AppendLine($" Joined LegalX on: {JoinedDate.ToString("dd.MM.yyyy")}");
             basicemployeeinfo.AppendLine($" Expertise in: {OtherExpertise}");
 
             return basicemployeeinfo.ToString();

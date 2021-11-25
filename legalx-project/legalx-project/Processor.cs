@@ -112,15 +112,15 @@ namespace legalxproject
                         switch (Console.ReadLine())
                         {
                             case "1":
-
+                                ListCases();
                                 break;
 
                             case "2":
-
+                                AddNewCase();
                                 break;
 
                             case "3":
-
+                                ListAppointments();
                                 break;
                         }
 
@@ -135,11 +135,11 @@ namespace legalxproject
                         switch (Console.ReadLine())
                         {
                             case "1":
-
+                                ListCases();
                                 break;
 
                             case "2":
-                                
+                                ListAppointments();
                                 break;
 
                             case "3":
@@ -167,11 +167,11 @@ namespace legalxproject
                                 break;
 
                             case "3":
-
+                                ListAppointments();
                                 break;
 
                             case "4":
-
+                                ListClients();
                                 break;
                         }
 
@@ -322,17 +322,26 @@ namespace legalxproject
 
         private void ListClients()
         {
-
+            for (int i = 0; i < clients.Count; i++)
+            {
+                Console.WriteLine(clients[i]);
+            }
         }
 
         private void ListCases()
         {
-
+            for (int i = 0; i < cases.Count; i++) 
+            {
+                Console.WriteLine(cases[i]);
+            }
         }
 
         private void ListAppointments()
         {
-
+            for (int i = 0; i < appointments.Count; i++)
+            {
+                Console.WriteLine(appointments[i]);
+            }
         }
 
 

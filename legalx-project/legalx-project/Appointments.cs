@@ -10,10 +10,10 @@ namespace legalxproject
     class Appointments
     {
         public int appointmentid { get; set; }
-        public int clientid { get; set; }
+        public int clientid { get; set; } 
         public int lawyerid { get; set; }
         public DateTime dateandtime { get; set; }
-        public string meetingroom { get; set; }
+        public EMeetingRoom meetingroom { get; set; }
         public string shortdescription { get; set; }
 
         public override string ToString()

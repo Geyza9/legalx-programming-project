@@ -1,6 +1,6 @@
 ﻿lawyerType;EmployeeId;Name;DOB;joinedDate;otherExpertise;YearsofExperience;Specialization
 
-senior;1re;Geza Lorincz;1998-04-04;2021-09-01;Knitting;10;Corporate
+senior;1;Geza Lorincz;1998-04-04;2021-09-01;Knitting;10;Corporate
 senior;2;Justin Paul Borggreve;1996-06-01;2017-10-04;11;Boating;Corporate
 senior;3;Zeynep Calisir;1995-09-28;2010-03-05;Languages;9;Corporate
 senior;4;Lily YongChang;1995-07-01;2010-05-30;MS Office;7;FamilyCase

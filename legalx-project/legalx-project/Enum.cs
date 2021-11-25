@@ -3,7 +3,7 @@ namespace legalxproject
 {
     public enum EEmployeeType
     {
-        unknown = 0, lawyer = 1, admin = 2, receptionist = 3
+        Unknown = 0, lawyer = 1, admin = 2, receptionist = 3
     }
 
     public enum ESpecialisation
@@ -11,4 +11,8 @@ namespace legalxproject
         unknown = 0, Corporate = 1, FamilyCase = 2, CriminalCase = 3 
     }
 
+    public enum EMeetingRoom
+    {
+        unknown, Aquarium = 20, Cube = 10, Cave = 8
+    }
 }

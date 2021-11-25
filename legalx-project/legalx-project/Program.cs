@@ -7,17 +7,11 @@ namespace legalxproject
     {
         public static void Main(string[] args)
         {
-            dataLoader d = new dataLoader();
             Processor p = new Processor();
 
-            List<Employee> lawyers = d.loadData(); //load the lawyers from the txt database
-
-            foreach (Employee lawyer in lawyers)
-            {
-                Console.WriteLine(lawyer);
-            }
-
-            p.login(); //login procedure
+            //p.login(); //login procedure
+            p.generateAndLoadDatabase(); //generate and load the data of employees
+            p.Process();
 
         }
 

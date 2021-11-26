@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace legalxproject
+﻿namespace legalxproject
 {
     class MainClass
     {
@@ -9,9 +6,14 @@ namespace legalxproject
         {
             Processor p = new Processor();
 
-            //p.login(); //login procedure
+            p.login(); //login procedure
             p.generateAndLoadDatabase(); //generate and load the data of employees
-            p.Process();
+
+            //Process() returns a boolean based on whether or not the user wants to run another task. If they don't want to run more tasks, Process() doesn't run again
+            while (true)
+            {
+                if (!p.Process()) { break; }
+            }
 
         }
 

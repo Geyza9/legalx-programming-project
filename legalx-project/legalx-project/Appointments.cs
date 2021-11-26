@@ -1,19 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace legalxproject
 {
     // appointment class
     class Appointments
     {
+        public Appointments() {  }
+
+        public Appointments(int appointmentid, int clientid, int lawyerid, DateTime dateandtime, string meetingroom, string shortdescription)
+        {
+            this.appointmentid = appointmentid;
+            this.clientid = clientid;
+            this.lawyerid = lawyerid;
+            this.dateandtime = dateandtime;
+            this.meetingroom = meetingroom;
+            this.shortdescription = shortdescription;
+        }
+
         public int appointmentid { get; set; }
         public int clientid { get; set; } 
         public int lawyerid { get; set; }
-        public DateTime dateandtime { get; set; }
-        public EMeetingRoom meetingroom { get; set; }
+        public DateTime dateandtime { get; set; } = new DateTime(0001, 01, 01, 00, 00, 00); //default value used to check if the actual date time was applied
+        public string meetingroom { get; set; }
         public string shortdescription { get; set; }
 
         public override string ToString()

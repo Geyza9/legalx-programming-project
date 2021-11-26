@@ -8,11 +8,7 @@ namespace legalxproject
 
     public enum ESpecialisation
     {
-        unknown = 0, Corporate = 1, FamilyCase = 2, CriminalCase = 3 
+        Unknown = 0, Corporate = 1, FamilyCase = 2, CriminalCase = 3
     }
 
-    public enum EMeetingRoom
-    {
-        unknown, Aquarium = 20, Cube = 10, Cave = 8
-    }
 }

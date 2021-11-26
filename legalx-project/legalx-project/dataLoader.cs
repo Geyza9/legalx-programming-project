@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 
 namespace legalxproject
 {
     public class dataLoader
     {
-        List<String> data = File.ReadAllLines("lawyerDataBase.txt").ToList();
-        List<Employee> employees = new List<Employee>();
+        //List<String> data = File.ReadAllLines("lawyerDataBase.txt").ToList();
+        //list to keep employees in
+        //List<Employee> employees = new List<Employee>();
 
 
         public List<Employee> loadData()
         {
+            //find txt file based on path and add it to a string list
             List<String> data = File.ReadAllLines("lawyerDataBase.txt").ToList();
+
+            //list to keep employees in
             List<Employee> employees = new List<Employee>();
 
             foreach (string line in data)
             {
-                if (line != data[0])
+                if (line != data[0]) //skip the first line as it's the headline
                 {
-                    if (line != data[1])
-                    {
-                        var columns = line.Split(';');
+                        var columns = line.Split(';'); //split rows with ;
                         if (columns[0] == "senior")
                         {
                             SeniorLawyer lawyer = new SeniorLawyer();
@@ -43,7 +44,7 @@ namespace legalxproject
                             }
                             catch (Exception e)
                             {
-                                Console.WriteLine("Incorrect database entry:");
+                                Console.WriteLine($"Incorrect database entry:");
                                 Console.WriteLine(e.Message);
                                 Console.WriteLine($"Employee {columns[2]} was not added to the database.");
                                 employees.Remove(lawyer);
@@ -76,7 +77,7 @@ namespace legalxproject
                                 employees.Remove(lawyer);
                             }
 
-                        }
+                        
 
                     }
 

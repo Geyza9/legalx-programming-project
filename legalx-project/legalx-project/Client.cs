@@ -1,13 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace legalxproject
 {// client class
     class Client
     {
+
+        public Client()
+        {
+
+        }
+
+        public Client(int id, string firstname, string middlename, string lastname, DateTime DOB, ESpecialisation casetype, string street, string streetnr, int zip, string city)
+        {
+            clientid = id;
+            this.firstname = firstname;
+            this.middlename = middlename;
+            this.lastname = lastname;
+            this.DOB = DOB;
+            this.casetype = casetype;
+            this.street = street;
+            this.streetnr = streetnr;
+            this.zip = zip;
+            this.city = city;
+        }
+
         // some properties have a default value assigned, which are used to confirm if the value has been successfully set
         public int clientid { get; set; }
         public string firstname { get; set; }
@@ -34,6 +51,7 @@ namespace legalxproject
 
             return clientstats.ToString();
         }
+
     }
 
     

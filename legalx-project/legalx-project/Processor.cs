@@ -88,7 +88,7 @@ namespace legalxproject
             meetingRooms.Add(new MeetingRooms("Cave", 8));
 
             //load lists for testing
-            clients.Add(new Client(0,"Testing","D","Ummy",new DateTime(1998,02,10),ESpecialisation.Corporate,"Vesterbro","22",2000,"New York"));
+            clients.Add(new Client(0,"Testing","D","Ummy",new DateTime(1998,02,10),ESpecialisation.Corporate,"Vesterbro","22","2000","New York"));
             cases.Add(new Cases(0,0,ESpecialisation.Corporate,new DateTime(2012,10,10),"5 months",3,1,"Bad stuff happened","Nothing"));
             appointments.Add(new Appointments(0,0,0,new DateTime(2018,08,22,12,00,00),"Cave","Weekly meeting"));
 
@@ -106,6 +106,9 @@ namespace legalxproject
                         Console.WriteLine("1. List all the cases");
                         Console.WriteLine("2. Add a new case");
                         Console.WriteLine("3. List all appointments");
+                        Console.WriteLine("4. Sign Out");
+
+
 
                         switch (Console.ReadLine())
                         {
@@ -120,6 +123,10 @@ namespace legalxproject
                             case "3":
                                 ListAppointments();
                                 break;
+
+                            case "4":
+                                returnToLogin();
+                                break;
                         }
 
                         break;
@@ -127,8 +134,8 @@ namespace legalxproject
                     case EEmployeeType.admin:
                         Console.WriteLine("Here are your options. Choose one by typing the number and pressing enter");
                         Console.WriteLine("1. List all the cases");
-                        Console.WriteLine("2. Add a new case");
-                        Console.WriteLine("3. List all appointments");
+                        Console.WriteLine("2. List all appointments");
+                        Console.WriteLine("3. Sign Out");
 
                         switch (Console.ReadLine())
                         {
@@ -138,6 +145,10 @@ namespace legalxproject
 
                             case "2":
                                 ListAppointments();
+                                break;
+
+                            case "3":
+                                returnToLogin();
                                 break;
 
                         }
@@ -150,6 +161,8 @@ namespace legalxproject
                         Console.WriteLine("2. Add a new appointment");
                         Console.WriteLine("3. List all appointments");
                         Console.WriteLine("4. List all clients");
+                        Console.WriteLine("5. Sign Out");
+
 
                         switch (Console.ReadLine())
                         {
@@ -168,12 +181,16 @@ namespace legalxproject
                             case "4":
                                 ListClients();
                                 break;
+
+                            case "5":
+                                returnToLogin();
+                                break;
                         }
 
                         break;
 
                 }
-
+                
             }
             if (loggedIn && runAnotherTask()) { return true; } else { return false; } //check if user wants to run another task, and return bool based on it
         }
@@ -244,17 +261,7 @@ namespace legalxproject
             Console.WriteLine("Please type in the client's street number and press enter");
             client.streetnr = Console.ReadLine();
             Console.WriteLine("Please type in the client's zip code and press enter");
-            do
-            {
-                try
-                {
-                    client.zip = int.Parse(Console.ReadLine());
-                }
-                catch
-                {
-                    Console.WriteLine("Invalid input. Please make sure to only use numbers");
-                }
-            } while (client.zip == 0);
+            client.zip = Console.ReadLine();
 
             Console.WriteLine("Please type in the client's city and press enter");
             client.city = Console.ReadLine();
@@ -506,6 +513,7 @@ namespace legalxproject
 
         private void ListClients()
         {
+            Console.Clear();
             for (int i = 0; i < clients.Count; i++)
             {
                 Console.WriteLine(clients[i]);
@@ -514,16 +522,20 @@ namespace legalxproject
 
         private void ListCases()
         {
+            Console.Clear();
             for (int i = 0; i < cases.Count; i++) 
             {
+                
                 Console.WriteLine(cases[i]);
             }
         }
 
         private void ListAppointments()
         {
+            Console.Clear();
             for (int i = 0; i < appointments.Count; i++)
             {
+                
                 Console.WriteLine(appointments[i]);
             }
         }
@@ -538,6 +550,7 @@ namespace legalxproject
                 {
                     if (input == 'Y' || input == 'y')
                     {
+                        Console.Clear();
                         Console.WriteLine("Client's name - ID");
                         foreach (Client client in clients)
                         {
@@ -561,6 +574,7 @@ namespace legalxproject
                 {
                     if (input == 'Y' || input == 'y')
                     {
+                        Console.Clear();
                         Console.WriteLine("Lawyer's name - ID");
                         foreach (Employee lawyer in lawyers)
                         {
@@ -576,19 +590,34 @@ namespace legalxproject
 
         private bool runAnotherTask()
         {
-            Console.WriteLine("Task complete. Press ENTER to perform another task, or Q to quit the program.");
+            Console.WriteLine("Task complete. Press Y to perform another task, or Q to quit the program.");
             char input = Console.ReadKey(true).KeyChar;
             while (true)
             {
-                if (input == '\n')
+                if (input == 'y'|| input == 'Y')
                 {
+                    Console.Clear();
                     return true;
                 }
                 if (input == 'q' || input == 'Q') { return false; }
                 input = Console.ReadKey().KeyChar;
             }
         }
+        private void returnToLogin()
+        {
+            Console.WriteLine("Press R to select a different user, or Q to quit the program");
+            char input = Console.ReadKey().KeyChar;
+            if (input == 'r' || input == 'R')
+            {
+                Console.Clear();
+                login();
+            }
+            if (input == 'q' || input == 'Q')
+            {
+                Environment.Exit(0);
+            }
 
+        }
        
     }
 }

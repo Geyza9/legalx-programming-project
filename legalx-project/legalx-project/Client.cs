@@ -11,7 +11,7 @@ namespace legalxproject
 
         }
 
-        public Client(int id, string firstname, string middlename, string lastname, DateTime DOB, ESpecialisation casetype, string street, string streetnr, int zip, string city)
+        public Client(int id, string firstname, string middlename, string lastname, DateTime DOB, ESpecialisation casetype, string street, string streetnr, string zip, string city)
         {
             clientid = id;
             this.firstname = firstname;
@@ -34,7 +34,7 @@ namespace legalxproject
         public ESpecialisation casetype { get; set; }
         public string street { get; set; }
         public string streetnr { get; set; } //is a string as some street numbers might have letters (e.g. 12A)
-        public int zip { get; set; } = 0;
+        public string zip { get; set; }
         public string city { get; set; }
 
        

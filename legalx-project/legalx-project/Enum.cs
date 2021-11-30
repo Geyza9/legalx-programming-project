@@ -1,5 +1,4 @@
-﻿using System;
-namespace legalxproject
+﻿namespace legalxproject
 {
     public enum EEmployeeType
     {

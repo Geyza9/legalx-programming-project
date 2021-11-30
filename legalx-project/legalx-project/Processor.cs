@@ -329,7 +329,7 @@ namespace legalxproject
                 }
             } while (appointment.lawyerid == -1);
 
-            Console.WriteLine("Please type in the appointment's date and time in the following format, and press enter \n (YYYY-MM-DD HH:MM)");
+            Console.WriteLine("Please type in the appointment's date and time in the following format, and press enter \n (YYYY-MM-DD hh:mm)");
 
             do
             {
@@ -340,7 +340,7 @@ namespace legalxproject
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-                    Console.WriteLine("Incorrect format, try again. Format: YYYY-MM-DD-HH-MM");
+                    Console.WriteLine("Incorrect format, try again. Format: YYYY-MM-DD hh:mm");
                 }
 
             } while (appointment.dateandtime == new DateTime(0001, 01, 01, 00, 00, 00));

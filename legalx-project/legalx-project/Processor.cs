@@ -9,7 +9,7 @@ namespace legalxproject
         string passWord = "a";
         string usernameInput;
         string passwordInput;
-        bool loggedIn = true; //should be false by default
+        bool loggedIn = false; //should be false by default
         EEmployeeType employeetype = (EEmployeeType)0; //should be 0 by default
 
         //DEBUGGING TOOLS

@@ -12,8 +12,6 @@ namespace legalxproject
         bool loggedIn = false; //should be false by default
         EEmployeeType employeetype = (EEmployeeType)0; //should be 0 by default
 
-        //DEBUGGING TOOLS
-        public bool loadTestingClients = false;
 
         // Instantiating Lists
         List<Employee> lawyers = new List<Employee>();

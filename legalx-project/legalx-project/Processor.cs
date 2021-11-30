@@ -57,7 +57,9 @@ namespace legalxproject
 
             if (usernameInput != userName || passwordInput != passWord)
             {
-                Console.WriteLine("Username or password incorrect");
+                Console.WriteLine("Username or password incorrect, try again.");
+                returnToLogin();
+                
             }
             else
             {

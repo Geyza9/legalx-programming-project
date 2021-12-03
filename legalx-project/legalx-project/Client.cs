@@ -34,7 +34,7 @@ namespace legalxproject
         public ESpecialisation casetype { get; set; }
         public string street { get; set; }
         public string streetnr { get; set; } //is a string as some street numbers might have letters (e.g. 12A)
-        public string zip { get; set; }
+        public string zip { get; set; } // also a string because some zip codes in foreign countries have letters in them
         public string city { get; set; }
 
        

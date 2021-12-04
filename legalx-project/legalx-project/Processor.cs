@@ -53,7 +53,17 @@ namespace legalxproject
 
             //prompt user to provide password
             Console.WriteLine("Please insert your password");
-            passwordInput = Console.ReadLine();
+            ConsoleKeyInfo key; passwordInput = null;
+            do
+            {
+                key = Console.ReadKey(true);
+                if (key.Key != ConsoleKey.Backspace && key.Key != ConsoleKey.Enter) // Backspace Should Not Work & ignores the enter key that is required to proceed
+                {
+                    passwordInput += key.KeyChar;
+                    Console.Write("*");
+                }
+            } while (key.Key != ConsoleKey.Enter); // Stops Receving Keys Once Enter is Pressed
+            Console.WriteLine();
 
             if (usernameInput != userName || passwordInput != passWord)
             {
